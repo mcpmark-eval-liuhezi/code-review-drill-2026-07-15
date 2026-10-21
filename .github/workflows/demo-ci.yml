@@ -1,0 +1,13 @@
+name: demo-ci
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Simulate a slow build
+        run: sleep 600
